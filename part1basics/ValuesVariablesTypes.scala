@@ -1,7 +1,9 @@
 package lectures.part1basics
 
 object ValuesVariablesTypes extends App{
-  val x: Int = 42
+  //; used to separate expressions on a single line. compiler inferred y to be an integer
+  val x: Int = 42; val y =5
+
   println(x)
   // VALS ARE IMMUTABLE
   // COMPILER can infer types
