@@ -1,10 +1,11 @@
 package lectures.part1basics
 
 object Expressions extends App{
-  val x = 1 + 2 // EXPRESSION
+  val x = 1 + 2 // EXPRESSION return a value
   println(x)
 
   println(2 + 3 * 4)
+  //maths expression
   // + - * / & | ^ << >> >>> (right shift with zero extension)
 
   println(1 == x)   //conditional operators
@@ -39,9 +40,11 @@ object Expressions extends App{
   val aWeirdValue = (aVariable = 3) // Unit === void
   println(aWeirdValue)
 
-  // side effects: println(), whiles, reassigning
+  // side effects: println(), whiles, reassigning. Scala forces everything to be an expression. So it makes statements
+  //to return null/unit
 
-  // Code blocks. Should return a value. Last statement gives the return type
+  // Code blocks. Should return a value. Last statement gives the return type. so its an expression
+  //definitions within a code block are local and cant be referred outside
 
   val aCodeBlock = {
     val y = 2
@@ -51,7 +54,7 @@ object Expressions extends App{
   }
 
   // 1. difference between "hello world" vs println("hello world")?
-  //"hello world" is a string value where println is a side effect that returns null
+  //"hello world" is a string value where println is a side effect that returns null/unit
   // 2.
 
   val someValue = {
