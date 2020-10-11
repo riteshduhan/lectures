@@ -19,7 +19,9 @@ object OOBasics extends App{
     // overloading - same function name with different signature (different parameters or types)
     def greet(): Unit = println(s"Hi, I am $name")
 
-    // multiple constructors
+    // multiple constructors. Thesecan be initiated by another constructor (Primary or secondary)
+    //Generally constructors are used for default parameter that can be achieved by assigning a default vale
+    //in the definition
     def this(name: String) = this(name, 0)
     def this() = this("John Doe")
   }
@@ -31,8 +33,8 @@ object OOBasics extends App{
   person.greet()                       //overloaded function called
   println(person.age)
 
-  val writer1 = new Writer("Ritesh", "Duhan", 1979)
-  val writer2 = new Writer("Ritesh", "Duhan", 1979)
+  val writer1 = new Writer("Ritesh", "Duhan", 1980)
+  val writer2 = new Writer("Ritesh", "Duhan", 1980)
   println(writer1.fullName)           //class method is called
 
   val novel1 = new Novel("Deception Point", 2020,writer1)

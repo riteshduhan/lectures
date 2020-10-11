@@ -7,6 +7,8 @@ object Recursion extends App{
     if (n <= 1) 1
     else {
       println("Computing factorial of " + n + " - I first need factorial of " + (n-1))
+      //this is not tail recursion and will result into stack overflow error if called for a big number. Last
+      //statement is not just function call but n* function so another stack is requested
       val result = n * factorial(n-1)
       println("Computed factorial of " + n)
 
@@ -14,10 +16,10 @@ object Recursion extends App{
     }
 
   println(factorial(10))
-  //  println(factorial(5000))
+  //  println(factorial(5000))  -- it will give stack overflow error
 
   def anotherFactorial(n: Int): BigInt = {
-    @tailrec
+    @tailrec    //@tailrec is used to ensure that the function is tail recursive
     def factHelper(x: Int, accumulator: BigInt): BigInt = {
       if (x <= 1) accumulator
       else factHelper(x - 1, x * accumulator) // TAIL RECURSION = use recursive call as the LAST expression

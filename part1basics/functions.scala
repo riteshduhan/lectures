@@ -15,7 +15,8 @@ object functions extends App{
     if (n == 1) aString
     else aString + aRepeatedFunction(aString, n-1)
   }
-
+  // when you omit the return type of a function, compiler finds it out from the implementation
+  // for recursive functions, return type is must as compiler cant figure put the return type using recursions.
   println(aRepeatedFunction("hello",3))
 
   // WHEN YOU NEED LOOPS, USE RECURSION.

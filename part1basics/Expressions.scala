@@ -44,6 +44,7 @@ object Expressions extends App{
   //to return null/unit
 
   // Code blocks. Should return a value. Last statement gives the return type. so its an expression
+  //code block is also an expression
   //definitions within a code block are local and cant be referred outside
 
   val aCodeBlock = {
