@@ -19,7 +19,7 @@ object OOBasics extends App{
     // overloading - same function name with different signature (different parameters or types)
     def greet(): Unit = println(s"Hi, I am $name")
 
-    // multiple constructors. Thesecan be initiated by another constructor (Primary or secondary)
+    // multiple constructors. These can be initiated by another constructor (Primary or secondary)
     //Generally constructors are used for default parameter that can be achieved by assigning a default vale
     //in the definition
     def this(name: String) = this(name, 0)
